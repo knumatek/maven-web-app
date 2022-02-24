@@ -34,15 +34,15 @@ pipeline{
 		}
 		stage('Predeployment'){
 			steps{
-				sh "docker build -t docker567/newproject ."
-				sh "docker login -u docker567 -p Jays@Frederick2019"
-				sh "docker push docker567/newproject"
+				sh "docker build -t dockeri567/newproject ."
+				sh "docker login -u dockeri567 -p Jays@Frederick2019"
+				sh "docker push dockeri567/newproject"
 			}
 		}
 		stage('Deployment'){
 			steps{
 				sh "echo ready for Predeployment"
-				sh "docker run --name myproject -d -p 8000:8080 docker567/newproject"
+				sh "docker run --name myproject -d -p 8000:8080 dockeri567/newproject"
 			}
 		}
 		stage('message'){
