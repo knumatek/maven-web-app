@@ -9,7 +9,7 @@ pipeline{
 		stage('git clone'){
 			steps{
 				sh "echo cloning the latest application version"
-				git@github.com:knumatek/maven-web-app.git
+				git "https://github.com/knumatek/maven-web-app"
 			}	
 		}	
 		stage('Build Job'){
